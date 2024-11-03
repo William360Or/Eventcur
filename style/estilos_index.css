@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pinyon+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --colorFondo :#1E1E1E;
+    --rojo: #A3121C;
+    --rojoclaro:#BD686F;
+    --fondoBlanco: #FFFCFC;
+    --blancoLetras: #FFFFFF;
+    --amarillo: #F4B86F;
+    --menus:#fffafa7a;
+    --menuActivo:#FFFAFA;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--colorFondo);
+}
+
+.banner{
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(rgba(0,0,0,0.71),rgba(0,0,0,0.71)), url(../img/fondo1.jpg);
+    background-size: cover;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu ul li {
+    position: relative;
+  }
+  
+  .menu ul li a {
+    color: var(--menus);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    gap: 40px;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  /* Efecto hover en enlaces */
+  .menu ul li:hover > a {
+    color: var(--menuActivo);
+  }
+  
+  /* Estilos del mega menú */
+  .mega-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 700px;
+    background-color: #f4f4f4;
+    border-radius: 5px ;
+    padding: 20px;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown:hover .mega-menu {
+    display: flex;
+  }
+  
+  .mega-menu .column {
+    width: 50%; 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .mega-menu h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "Oswald";
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--rojo);
+  }
+  
+.opciones{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+  .mega-menu .column a {
+    color: var(--colorFondo);
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+  }
+  
+.mega-menu a:hover {
+    color: var(--rojoclaro);
+    font-weight: bold;
+  }
+
+
+.banner__eslogan{
+    font-family: "Pinyon Script";
+    font-size: 128px;
+    color: var(--blancoLetras);
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.banner__btn--personaliza{
+    width: 328px;
+    height: 59px;
+    border-radius: 2px;
+    border: 1px solid var(--amarillo);
+    background-color: var(--rojo);
+    color: var(--blancoLetras);
+    font-family: "Oswald";
+    font-size: 24px;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+    line-height: 59px;
+}
+/*Seccion about*/
+
+.secciones{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 470px;
+    padding-top: 52px;
+    padding-left: 50px;
+}
+
+.about{    
+    background-color: var(--fondoBlanco);    
+}
+
+.about__texto{
+    width: 680px;
+    height: 387px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 114px;
+}
+.about__titulo{
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 35px;
+    
+}
+
+.about__imagen{    
+    width: 390px;
+    height: 390px;
+    border-radius: 10px;
+    /*box-shadow: 30px 20px 40px var(--rojo);*/
+}
+
+/*Seccion Mision*/
+
+.mision__imagen{
+    width: 482px;
+    height: 358px;
+    border-radius: 10px;
+}
+
+.mision__titulo{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    color: var(--amarillo);
+    letter-spacing: 0.1em;
+}
+
+.mision__texto{
+    width: 680px;
+    height: 387px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--blancoLetras);
+}
+
+.vision{
+    background-color: var(--fondoBlanco); 
+}
+
+.vision__texto{
+    width: 680px;
+    height: 387px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 114px;
+}
+
+.valores{
+   align-items: center;
+   justify-content: space-evenly;
+}
+.vision__titulo{
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 35px;
+}
+
+.vision__imagen{
+    width: 390px;
+    height: 390px;
+    border-radius: 10px;
+}
+
+.valores__valor{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 27px;
+}
+
+.valores__valor__img-creatividad{
+  width: 145px ;
+  height: 174px;
+}
+
+.valores__valor__titulo{
+    font-family: "Oswald";
+    font-weight: 400;
+    color: var(--amarillo);
+}
+
+.valores__valor__parrafo{
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--blancoLetras);
+}
+
+.valores__valor__img-calidad{
+    width: 128px ;
+  height: 136px;
+}
+
+.valores__valor__img-compromiso{
+    width: 152px;
+  height: 152px;
+}
