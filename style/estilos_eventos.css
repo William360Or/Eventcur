@@ -21,95 +21,86 @@ body{
     background-color: var(--colorFondo);
 }
 
-/* Estilos básicos del menú */
-.menu {
-    background-color: var(--rojo);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-
-  }
+.galeria{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+.galeria_titulo{
+  font-family: "Pinyon Script";
+  font-size: 126px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  color: var(--blancoLetras);
+  margin: 60px 0 20px 0;
   
-  .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .menu ul li {
-    position: relative;
-  }
-  
-  .menu ul li a {
-    color: var(--menus);
-    padding: 10px 20px;
-    text-decoration: none;
-    display: flex;
-    gap: 40px;
-    font-family: "Oswald";
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  /* Efecto hover en enlaces */
-  .menu ul li:hover > a {
-    color: var(--menuActivo);
-  }
-  
-  /* Estilos del mega menú */
-  .mega-menu {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 700px;
-    background-color: #f4f4f4;
-    border-radius: 5px ;
-    padding: 20px;
-    display: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown:hover .mega-menu {
-    display: flex;
-  }
-  
-  .mega-menu .column {
-    width: 50%; 
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  }
-  
-  .mega-menu h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: "Oswald";
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--rojo);
-  }
-  
-.opciones{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
-  .mega-menu .column a {
-    color: var(--colorFondo);
-    font-family: "Roboto";
-    font-size: 18px;
+.galeria_imagenes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galeria_imagenes--imagen{
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+  }
+
+.banner__btn--personaliza{
+    width: 328px;
+    height: 59px;
+    border-radius: 2px;
+    border: 1px solid var(--amarillo);
+    color: var(--blancoLetras);
+    font-family: "Oswald";
+    font-size: 24px;
     font-weight: 300;
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
-  }
-  
-  .mega-menu a:hover {
-    color: var(--rojoclaro);
-    font-weight: bold;
-  }
+    text-align: center;
+    line-height: 59px;
+    margin-top: 80px;
+}
+
+
+.comentario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;  
+  margin: 50px 0 20px 0;
+}
+
+.comentario_titulo{
+  font-family: "Oswald";
+  color: var(--blancoLetras);
+  font-size: 1.5em;
+}
+
+.comentario_tarjetas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tarjeta{
+  width: 300px;
+  height: 80px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--fondoBlanco);
+  border: 2px solid var(--rojo);
+}
+
+.tarjeta h3{
+  font-family: "Oswald";
+  font-weight: 700;
+  color: var(--rojo);
+
+}

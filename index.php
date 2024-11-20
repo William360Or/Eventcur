@@ -18,18 +18,18 @@
         <div class="column">
           <h3>Familiares</h3>
           <div class="opciones">
-          <a href="eventos.php">Matrimonios</a>
-          <a href="eventos.php">Cumpleaños</a>
-          <a href="eventos.php">15 años</a>
-          <a href="eventos.php">Grados</a>
+          <a href="eventos.php?evento=matrimonio">Matrimonios</a>
+          <a href="eventos.php?evento=cumple">Cumpleaños</a>
+          <a href="eventos.php?evento=quince">15 años</a>
+          <a href="eventos.php?evento=grado">Grados</a>
           </div>
         </div>
         <div class="column">
           <h3>Corporativos</h3>
           <div class="opciones">
-          <a href="eventos.php">Conferencias</a>
-          <a href="eventos.php">Reuniones Corporativas</a>
-          <a href="eventos.php">Fiestas de fin de año</a>
+          <a href="eventos.php?evento=conferencia">Conferencias</a>
+          <a href="eventos.php?evento=reucorporativa">Reuniones Corporativas</a>
+          <a href="eventos.php?evento=finanio">Fiestas de fin de año</a>
           </div>
         </div>
   
@@ -100,6 +100,6 @@
     </section>
     
     
-<script src="scripts/script.js"></script>
+
 </body>
 </html>
