@@ -55,42 +55,93 @@
 </section>
 <section class="formulario">
 <!-- Formulario de fecha y tipo de evento -->    
-    <form action="">
-      <div class="formuario_tipoFecha">
-        <p>Fecha y tipo de evento</p>
-        <label for="form_eventofecha--opcion">Selecciona una opción de evento:</label>
-        <select id="form_eventofecha--opcion" name="form_eventofecha" required>     
-          <option value="" disabled selected>Elige una opción</option>
-       </select>
-        <label for="form_fecha">Fecha:</label>
-        <input type="date" id="form_fecha" required>
-        <a href="#" class="form_eventofecha--btn">Personalizar</a>
+    <form method="post" action="Funciones/procesarFormulario.php">
+    <p class="titulo_subCategoria">Fecha y tipo de evento</p>
+      <div class="tipo_Fecha">
+      
+        <div>
+          <label for="tipo_fecha--opcion">Evento</label><br>
+          <select id="tipo_fecha--opcion" name="tipoEvento" class="box" required>     
+            <option value="" disabled selected>Elige una opción</option>
+          </select>
+        </div>
+        <div>
+           <label for="tipo_fecha--fecha">Fecha</label><br>
+           <input type="date" id="form_fecha" name="fecha" class="box" required>
+           <button id="tipo_fecha--btnPersonalizar">Personalizar </button>
+        </div>
+        
+       <!-- <a href="#" class="tipo_fecha--btnPersonalizar" id="tipo_fecha--btnPersonalizar">Personalizar</a> -->    
       </div>
+  
+
+   
       
         <!-- Datos de contacto -->
-      <div class="formulario_datos">
-      <p>Datos de contacto</p>
-      <label for="formulario__nombre">Nombre:</label>
-      <input type="text" id="formulario__nombre" placeholder="Ingresa tu nombre" required>
-      <label for="formulario__apellido">Apellido:</label>
-      <input type="text" id="formulario_nombre" placeholder="Ingresa tu apellido" required>
-      <label for="formulario__email">E-mail:</label>
-      <input type="email" name="email" id="formulario__email" placeholder="Ingresa tu correo" required>
+    <section id="formulario" >
+    <p class="titulo_subCategoria">Datos de contacto</p>
+      <div class="datos" id="datos">
+
+        <div>
+        <label for="datos__nombre">Nombre</label><br>
+        <input type="text" id="datos__nombre" class="box" name="nombre" placeholder="Ingresa tu nombre" required><br>
+        </div>
+
+        <div>
+        <label for="datos__apellido">Apellido</label><br>
+        <input type="text" id="datos_nombre" class="box" name="apellido" placeholder="Ingresa tu apellido" required><br>
+        </div>
+
+        <div>
+        <label for="datos__email">E-mail</label><br>
+        <input type="email" name="email" id="datos__email" class="box" placeholder="Ingresa tu correo" required>
+        </div>
+
+        <div>
+        <label for="datos__telefono">Telefono</label><br>
+        <input type="tel" name="telefono" class="box" id="datos__telefono" placeholder="Ingresa tu telefono" required>
+        </div>
       </div>
 
-      <h2 class="formulario_titulo">Personalización del evento</h2>
-
-      <div class="formulario_detalles">
-        <p>Detalles</p>
-        <label for="form_numInvitados">Número de invitados</label>
-        <input type="number" name="numInvitados" id="form_numInvitados" placeholder="200" required>
+      <div class="formulario_titulo">
+        <h2>Personalización del evento</h2>
       </div>
       
+      <p  class="titulo_subCategoria">Detalles</p>
+      
+      <div class="detalles">
+        
+      <div>
+       <label for="detalles_numInvitados">Número de invitados</label><br>
+        <input type="number" name="numInvitados" id="detalles_numInvitados" placeholder="200" class="detalles_numInvitados" required><br>
+      </div>  
+
+      <div>
+      <label for="">Duración del evento</label><br>
+        <select id="detalles_duracion" name="duracion" class="detalles_duracion" required>     
+          <option value="" disabled selected>0</option>
+       </select>
+       <br>
+      </div>
+
+      <div>
+      <label for="detalles_hora">Hora del evento</label><br>
+      <input type="time" id="detalles_hora" name="hora" class="detalles_hora" required><br>
+      </div>
+     
+      </div>
+  <div id="servicios"></div>
+   
+
+  <div class="cotizacion">
+    <button type="submit" class="cotizacion--btn">Generar Cotización </button>
+    </div>
+    </section>
+    
+    
 
     </form>
 
-
-  
 </section>
 
 
@@ -98,11 +149,11 @@
 <script>
   let tipoEvento=<?php echo ($listTipoEvento); ?>;
   let fechaReservada=<?php echo($fechareservada); ?>;
+  console.log(tipoEvento)
   BloquearCalendario();
   GeneraListaEventos(tipoEvento);
-  FechasReservadas(fechaReservada)
+  FechasReservadas(fechaReservada);
   
-
 </script>
 </body>
 </html>

@@ -1,9 +1,8 @@
 <?php
-
 function CargarComentarios($evento){
     /*revisar comentarios por evento filtrando por la db*/
     include './Funciones/conexion.php';
-    $sql="select id_prueba, fecha from prueba limit 10;";
+    $sql="select id_comentario, com_comentario from comentario limit 10;";
     $result = $con->query($sql);
     $comentarios= array();
     if($result->num_rows>0){
@@ -34,7 +33,7 @@ function CargarTiposEvento(){
 function CargarFechasEventos(){
     include './Funciones/conexion.php';
     $fechaActual = date('d-m-Y');
-    $sql="select fecha, count(*) Total from prueba where fecha>".$fechaActual." group by fecha";
+    $sql="select eve_fecha, count(*) Total from evento where eve_fecha>".$fechaActual." group by eve_fecha";
     $result = $con->query($sql);
     $fechaReservada= array();
     if($result->num_rows>0){
@@ -45,5 +44,8 @@ function CargarFechasEventos(){
     $con->close();    
     return json_encode($fechaReservada);
 }
+
+
+
 
 ?>
