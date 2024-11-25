@@ -41,8 +41,10 @@ function CargarFechasEventos(){
             $fechaReservada[] = $row;
         }
     }
+   
     $con->close();    
     return json_encode($fechaReservada);
+   
 }
 
 

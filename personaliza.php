@@ -2,6 +2,8 @@
    include './Funciones/funciones.php';
    $listTipoEvento=CargarTiposEvento();
    $fechareservada=CargarFechasEventos();
+
+   echo "<script>console.log('".$listTipoEvento."')</script"
 ?>
 
 <!DOCTYPE html>
@@ -145,8 +147,9 @@
 </section>
 
 
-<script src="scripts/script_personaliza.js"></script>
+<script src="/scripts/script_personaliza.js"></script>
 <script>
+
   let tipoEvento=<?php echo ($listTipoEvento); ?>;
   let fechaReservada=<?php echo($fechareservada); ?>;
   console.log(tipoEvento)
