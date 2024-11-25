@@ -1,3 +1,33 @@
+<?php
+   
+    if (isset($_POST['buscar'])) {
+        
+        $input = $_POST['busqueda_Evento'];
+
+       
+       $codigoEvento=BuscarEvento($input);
+
+    }
+
+    function BuscarEvento($texto) {
+        include './Funciones/conexion.php';
+        $sql="SELECT id_evento FROM evencur.evento where id_evento=".$texto.";";
+        $result = $con->query($sql);
+        $fila = $result->fetch_assoc();
+        if (is_array($fila)) {
+          $idCliente = $fila['id_evento'];
+          if($idCliente>0){
+            return $idCliente;
+          }
+      } else {
+          return 0;
+      }
+        
+      
+        
+    }
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/estilo_menu.css">
+    <link rel="stylesheet" href="style/estilos_mievento.css">
 </head>
 <body>
 <nav class="menu">
@@ -37,7 +68,37 @@
   </ul>
 </nav>
 
-<h1>mi evento</h1>
-   
+<section class="banner">
+  <div id="contenido_busqueda" class="contenido_busqueda">
+    <form action="" method="post">
+      <label for=""></label>
+      <input type="text" class="busqueda_Evento" name="busqueda_Evento" placeholder="Codigo del evento" required>
+      
+      <button id="Btn_buscar" class="btnBuscar" name="buscar">Buscar </button>
+    </form>
+      <p class="recomendacion">Para validar tu evento, realizar cancelaciones, reprogramación, dejar un comentario ingresa el código de tu evento.</p>
+  </div>
+  <div class="comentario" id="comentario">
+
+  </div>
+
+</section>
+
+
+
+<script src="scripts/script_mievento.js"></script>
+<script>
+  let codigoEvento=<?php echo ($codigoEvento); ?>;
+  if(codigoEvento>0){
+    estructuraFormulario();
+  }else{
+    alert("Ingreasa un codigo de evento valido");
+  }
+
+</script>
+
+
+
+
 </body>
 </html>

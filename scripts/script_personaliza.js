@@ -517,7 +517,7 @@ function CargarServicios(listaServicios, tipoevento){
                 opcionTecnologia.appendChild(checkTecnologia);
                 opcionTecnologia.appendChild(labelTecnologia);
 
-                tecnologiayaudivisuales.appendChild(opcionDecoracion)
+                tecnologiayaudivisuales.appendChild(opcionTecnologia)
                 break
             case "Decoracion de espacios":
                 const opcionDecoracionespacio=document.createElement("div");
