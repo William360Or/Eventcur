@@ -31,17 +31,17 @@
           <h3>Familiares</h3>
           <div class="opciones">
           <a href="eventos.php?evento=matrimonio">Matrimonios</a>
-          <a href="eventos.php?evento=cumple">Cumpleaños</a>
-          <a href="eventos.php?evento=quince">15 años</a>
+          <a href="eventos.php?evento=cumpleaños">Cumpleaños</a>
+          <a href="eventos.php?evento=Quince_años">15 años</a>
           <a href="eventos.php?evento=grado">Grados</a>
           </div>
         </div>
         <div class="column">
           <h3>Corporativos</h3>
           <div class="opciones">
-          <a href="eventos.php?evento=conferencia">Conferencias</a>
-          <a href="eventos.php?evento=reucorporativa">Reuniones Corporativas</a>
-          <a href="eventos.php?evento=finanio">Fiestas de fin de año</a>
+          <a href="eventos.php?evento=conferencias">Conferencias</a>
+          <a href="eventos.php?evento=Reuniones_Corporativas">Reuniones Corporativas</a>
+          <a href="eventos.php?evento=Fiesta_de_fin_de_año">Fiestas de fin de año</a>
           </div>
         </div>
   

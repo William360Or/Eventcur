@@ -19,7 +19,7 @@ require 'PHPMailer\src\SMTP.php';
         $mail->Host = 'smtp.gmail.com'; 
         $mail->SMTPAuth = true;
         $mail->Username = 'williamolaya93@gmail.com'; 
-        $mail->Password = 'bjho dhtq kgop kukc'; 
+        $mail->Password = 'spke nejf gulg bqbm'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port =465;
         $mail->CharSet = 'UTF-8';

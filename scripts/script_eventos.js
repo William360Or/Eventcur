@@ -14,7 +14,7 @@ const evento=parametro.get("evento");
             
             
         ],
-        cumple:[
+        cumpleaños:[
             "img/cumple/cumple1.jpg",
             "img/cumple/cumple2.jpg",
             "img/cumple/cumple3.jpg",
@@ -25,7 +25,7 @@ const evento=parametro.get("evento");
             "img/cumple/cumple8.jpg",
         ],
 
-        quince:[
+        Quince_años:[
             "img/quince/quince1.jpg",
             "img/quince/quince2.jpg",
             "img/quince/quince3.jpg",
@@ -48,7 +48,7 @@ const evento=parametro.get("evento");
 
 
         ],
-        conferencia:[
+        conferencias:[
             "img/conferencias/conf1.jpg",
             "img/conferencias/conf2.jpg",
             "img/conferencias/conf3.jpg",
@@ -58,7 +58,7 @@ const evento=parametro.get("evento");
             "img/conferencias/conf7.jpg",
             "img/conferencias/conf8.jpg"
         ],
-        reucorporativa:[
+        Reuniones_Corporativas:[
             "img/reunionescorp/reucorp1.jpg",
             "img/reunionescorp/reucorp2.jpg",
             "img/reunionescorp/reucorp3.jpg",
@@ -68,7 +68,7 @@ const evento=parametro.get("evento");
             "img/reunionescorp/reucorp7.jpg",
             "img/reunionescorp/reucorp8.jpg"
         ],
-        finanio:[
+        Fiesta_de_fin_de_año:[
             "img/fiestafin/finanio1.jpg",
             "img/fiestafin/finanio2.jpg",
             "img/fiestafin/finanio3.jpg",
@@ -87,22 +87,22 @@ function CambiarFotos(){
         case 'matrimonio':
            GeneraGaleria("Matrimonios");
         break
-        case 'cumple':
+        case 'cumpleaños':
             GeneraGaleria("Cumpleaños");
         break
-        case 'quince':
+        case 'Quince_años':
             GeneraGaleria("15 Años");
         break
         case 'grado':
             GeneraGaleria("Grados");
         break
-        case 'conferencia':
+        case 'conferencias':
             GeneraGaleria("Conferencias");
         break
-        case'reucorporativa':
+        case'Reuniones_Corporativas':
         GeneraGaleria("Reuniones Corporativas");
         break
-        case 'finanio':
+        case 'Fiesta_de_fin_de_año':
             GeneraGaleria("Fiestas de Fin de Año");
         break
 
@@ -111,13 +111,15 @@ function CambiarFotos(){
 
 function cambiarComentarios(datosJson){
     const contenedorComentario=document.getElementById('comentario_tarjetas');
+    contenedorComentario.innerHTML="";
+    
     for(let i=0; i<10; i++){
         const divcomentario=document.createElement("div");
         divcomentario.classList.add("tarjeta");
         const titulo =document.createElement("h3");
-        titulo.textContent=datosJson[i].id_prueba;
+        titulo.textContent=datosJson[i].nombre +" "+ datosJson[i].apellido;
         const coment= document.createElement("p");
-        coment.textContent=datosJson[i].fecha;
+        coment.textContent=datosJson[i].comentario;
 
         divcomentario.appendChild(titulo);
         divcomentario.appendChild(coment);
@@ -144,24 +146,26 @@ function GeneraComentarios(datosJson){
    
     switch(evento){
         case 'matrimonio':
+           
            cambiarComentarios(datosJson);
+           
         break
-        case 'cumple':
+        case 'cumpleaños':
             cambiarComentarios(datosJson);
         break
-        case 'quince':
+        case 'Quince_años':
             cambiarComentarios(datosJson);
         break
         case 'grado':
             cambiarComentarios(datosJson);
         break
-        case 'conferencia':
+        case 'conferencias':
             cambiarComentarios(datosJson);
         break
-        case'reucorporativa':
+        case'Reuniones_Corporativas':
             cambiarComentarios(datosJson);
         break
-        case 'finanio':
+        case 'Fiesta_de_fin_de_año':
             cambiarComentarios(datosJson);
         break
 
